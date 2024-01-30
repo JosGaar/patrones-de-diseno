@@ -1,0 +1,10 @@
+Supongamos que se está construyendo un sistema de generación de informes y se desea crear informes con diferentes formatos y estilos. 
+Aquí hay un ejemplo simple utilizando el patrón Builder.
+
+En este ejemplo, Report es el producto que se está construyendo, IReportBuilder es la interfaz del Builder, y 
+SimpleReportBuilder y DetailedReportBuilder son implementaciones concretas del Builder. 
+El ReportDirector utiliza un Builder para construir un informe paso a paso, y el cliente utiliza el 
+director para construir diferentes informes con diferentes estilos y contenido.
+
+
+

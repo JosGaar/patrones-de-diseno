@@ -1,0 +1,9 @@
+Supongamos que se está construyendo un sistema de procesamiento de pagos y 
+se quiere implementar diferentes estrategias de procesamiento de impuestos dependiendo del tipo de producto que se está vendiendo.
+
+En este ejemplo:
+
+TaxCalculationStrategy (Strategy): Define la interfaz común para los algoritmos de cálculo de impuestos.
+BasicTaxCalculation, LuxuryTaxCalculation (ConcreteStrategy): Son implementaciones concretas de estrategias que encapsulan algoritmos específicos de cálculo de impuestos.
+PaymentProcessor (Context): Mantiene una referencia a una estrategia y utiliza esta estrategia para calcular impuestos durante el procesamiento de pagos.
+PaymentClient (Client): Utiliza el procesador de pagos para realizar transacciones con diferentes estrategias de cálculo de impuestos.

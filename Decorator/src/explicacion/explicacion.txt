@@ -1,0 +1,8 @@
+Supongamos que se está trabajando en un sistema de procesamiento de texto y se quiere permitir que la aplicación de formatos adicionales a un texto, 
+como negrita y cursiva. Se utilizará el patrón Decorator para lograr esto.
+
+Component (Text): Define la interfaz común para los objetos que pueden tener responsabilidades añadidas de manera dinámica.
+ConcreteComponent (PlainText): Implementa la interfaz definida por Text y proporciona la implementación base.
+Decorator (TextDecorator): Mantiene una referencia a un objeto Text y define una interfaz que se ajusta a la interfaz de Text.
+ConcreteDecoratorA y ConcreteDecoratorB (BoldTextDecorator y ItalicTextDecorator): Extienden la funcionalidad de Text y añaden responsabilidades adicionales.
+Cliente (TextProcessor): Crea objetos Text y aplica decoradores para agregar funcionalidades.

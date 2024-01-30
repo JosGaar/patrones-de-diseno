@@ -1,0 +1,15 @@
+Supongamos que se tiene un sistema de procesamiento de documentos que puede contener varios tipos de elementos, como párrafos, imágenes y tablas. 
+Se quiere implementar una funcionalidad de exportación que pueda exportar documentos a diferentes formatos, como HTML y PDF.
+
+En este ejemplo:
+
+DocumentElement (Element): Define la interfaz común para los elementos del documento.
+Paragraph, Image, Table (ConcreteElement): Son implementaciones concretas de elementos del documento.
+DocumentVisitor (Visitor): Define la interfaz común para los visitantes.
+HtmlExporter, PdfExporter (ConcreteVisitor): Son implementaciones concretas de visitantes que proporcionan la implementación específica de la exportación en formato HTML y PDF, respectivamente.
+Document (ObjectStructure): Contiene una colección de elementos del documento y permite a los visitantes recorrer los elementos.
+DocumentProcessingClient (Client): Utiliza el documento y los visitantes para exportar el contenido del documento a diferentes formatos.
+
+En este escenario, el patrón Visitor permite agregar nuevas funcionalidades de exportación (nuevos visitantes) 
+sin modificar las clases de los elementos del documento. Cada visitante encapsula la lógica específica de exportación, y 
+los elementos del documento invocan el método adecuado en el visitante para realizar la operación correspondiente. 

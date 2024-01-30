@@ -1,0 +1,11 @@
+Supongamos que se está trabajando en un sistema de representación de estructuras organizativas, 
+donde los empleados pueden tener subordinados y también pueden ser parte de equipos. 
+Se utilizará el patrón Composite para representar esta jerarquía.
+
+En este ejemplo:
+
+Component (Employee): Declara la interfaz común para todos los objetos, tanto hojas (IndividualEmployee) como composiciones (Team).
+Leaf (IndividualEmployee): Representa los objetos hoja en la composición, que no tienen hijos.
+Composite (Team): Define comportamientos específicos para los objetos que tienen hijos y almacena componentes hijos. Puede contener tanto empleados individuales como otros equipos.
+Client (OrganizationClient): Manipula los objetos a través de la interfaz común de Employee, tratando tanto a los empleados individuales como a los equipos de manera uniforme.
+

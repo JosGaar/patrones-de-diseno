@@ -1,0 +1,10 @@
+Supongamos que se está desarrollando un editor de documentos y se desea optimizar el uso de memoria para las letras del alfabeto que se 
+utilizan repetidamente en diferentes documentos. Se utilizará el patrón Flyweight para compartir instancias de letras comunes y reducir 
+la carga en memoria.
+
+En este ejemplo:
+
+Flyweight (Letter): Define la interfaz común para las letras.
+ConcreteFlyweight (ConcreteLetter): Implementa la interfaz Flyweight y almacena el estado compartido (carácter). En este caso, el estado intrínseco es el carácter.
+FlyweightFactory (LetterFactory): Crea y administra objetos Flyweight (letras). Utiliza una caché (letterCache) para reutilizar instancias existentes y reducir la creación de nuevas instancias.
+Cliente (DocumentEditor): Utiliza la fábrica y las letras compartidas para imprimir letras con diferentes fuentes.

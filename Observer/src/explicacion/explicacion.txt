@@ -1,0 +1,10 @@
+Supongamos que se está trabajando en un sistema de monitoreo de acciones en la bolsa de valores, 
+donde los inversores desean recibir notificaciones cuando el precio de una acción cambia.
+
+En este ejemplo:
+
+StockMarket (Subject): Define la interfaz para agregar, eliminar y notificar observadores.
+StockExchange (ConcreteSubject): Implementa la interfaz StockMarket y mantiene el estado (precio de las acciones). Notifica a los observadores cuando el precio de una acción cambia.
+Investor (Observer): Define la interfaz para recibir actualizaciones del sujeto.
+StockInvestor (ConcreteObserver): Implementa la interfaz Investor y almacena una referencia al sujeto. Recibe notificaciones y actualiza su estado según sea necesario.
+StockMarketClient (Client): Utiliza la bolsa de valores y los inversores para simular cambios en el precio de las acciones y notificar a los inversores interesados.

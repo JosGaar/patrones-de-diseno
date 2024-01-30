@@ -1,0 +1,7 @@
+Supongamos que se está desarrollando un sistema de compras en línea y se necesita un subsistema para gestionar el proceso de pago.
+Se puede utilizar el patrón Facade para simplificar la interacción del cliente con el subsistema de pagos.
+
+Facade (OnlineShoppingFacade): Proporciona una interfaz simplificada para que los clientes realicen compras en línea. Encapsula la complejidad de interactuar con los subsistemas de procesamiento de pagos, actualización de inventario y envío de productos.
+Subsystem (PaymentProcessor, InventorySystem, ShippingSystem): Representan los subsistemas que realizan funciones específicas. La fachada utiliza estos subsistemas para cumplir con las operaciones de compra.
+Cliente (OnlineShoppingClient): Utiliza la fachada para realizar una compra en línea sin preocuparse por los detalles internos del procesamiento de pagos, actualización de inventario y envío.
+

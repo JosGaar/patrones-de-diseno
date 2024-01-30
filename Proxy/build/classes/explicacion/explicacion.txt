@@ -1,0 +1,9 @@
+Supongamos que se está trabajando en un sistema de carga de imágenes desde la web, y se desea implementar la carga 
+diferida de imágenes para optimizar el rendimiento. Puedes usar el patrón Proxy para lograr esto.
+
+Subject (ImageLoader): Define la interfaz común para la carga de imágenes.
+RealSubject (RealImageLoader): Implementa la interfaz definida por el Subject y representa el objeto real que realiza la carga real de la imagen.
+Proxy (ImageLoaderProxy): Mantiene una referencia al RealSubject y controla el acceso a este. Implementa la misma interfaz que el Subject. En este caso, el proxy carga el RealSubject solo cuando es necesario.
+Cliente (ImageLoadingClient): Utiliza el proxy para cargar la imagen. El cliente interactúa con el proxy, y la carga real de la imagen ocurre solo cuando se llama al método loadImage().
+
+Este patrón Proxy es útil cuando se desea controlar el acceso a un objeto costoso o cuando la creación del objeto real debe diferirse hasta que sea realmente necesario.

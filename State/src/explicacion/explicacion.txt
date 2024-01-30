@@ -1,0 +1,9 @@
+Supongamos que se está construyendo un sistema de gestión de pedidos en una tienda en línea y 
+se desea implementar un estado de pedido para manejar diferentes etapas del proceso de pedido.
+
+En este ejemplo:
+
+OrderContext (Context): Representa el contexto del pedido y mantiene el estado actual del pedido. Proporciona métodos para cambiar y procesar el pedido.
+OrderState (State): Define la interfaz para los estados concretos y declara el método processOrder que representa la acción asociada con el estado.
+NewOrderState, ShippedOrderState, DeliveredOrderState (ConcreteState): Son implementaciones concretas de estados que encapsulan el comportamiento específico asociado con cada estado del pedido.
+OrderProcessingClient (Client): Utiliza el contexto y los estados para simular el procesamiento de un pedido a través de diferentes etapas.

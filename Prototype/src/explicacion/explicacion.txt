@@ -1,0 +1,6 @@
+Supongamos que se está trabajando en un sistema de gestión de documentos y se quiere implementar la clonación profunda para duplicar 
+documentos que pueden contener estructuras internas complejas. En este caso, se utiliza el patrón Prototype con clonación profunda.
+
+En este ejemplo, ComplexDocument es una implementación concreta de la interfaz IDocument. Esta implementación tiene una estructura interna compleja 
+representada por una lista de párrafos. La clonación profunda se realiza en el método clone(), 
+donde se crea una nueva lista para los párrafos del documento clonado.

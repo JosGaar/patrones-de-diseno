@@ -1,0 +1,6 @@
+Supongamos que se está desarrollando un sistema de creación de interfaces gráficas (GUI) que puede tener diferentes estilos 
+(por ejemplo, estilo de ventana y estilo de botón). Aquí hay un ejemplo simple usando Abstract Factory.
+
+En este ejemplo, IGUIFactory es la interfaz AbstractFactory, y LightGUIFactory y DarkGUIFactory son las implementaciones concretas de esa interfaz. 
+Cada fábrica concreta crea una familia específica de productos (botones y ventanas) con un estilo particular (claro u oscuro). 
+El cliente, GUIApplication, puede crear interfaces gráficas con diferentes estilos sin conocer las clases concretas exactas de los productos. 

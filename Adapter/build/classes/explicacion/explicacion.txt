@@ -1,0 +1,17 @@
+Supongamos que se trabaja en un sistema que utiliza una biblioteca externa para gestionar la manipulación de archivos en formato CSV, 
+pero la aplicación interna espera objetos en formato JSON. Aquí hay un ejemplo simple de cómo usar el patrón Adapter para lograr la adaptación.
+
+En este ejemplo:
+
+Target (JSONFormatter): Define la interfaz que espera el cliente para formatear datos en formato JSON.
+
+Adaptee (CSVFormatter): Representa la interfaz existente que formatea datos en formato CSV.
+
+Adapter (CSVAdapter): Implementa la interfaz Target (JSONFormatter) y utiliza una instancia de Adaptee (CSVFormatter) 
+para adaptar las llamadas al formato JSON.
+
+Client (Application): Utiliza el Adapter para interactuar con la interfaz Target (JSONFormatter), 
+sin necesidad de conocer la implementación interna del Adaptee (CSVFormatter).
+
+Este ejemplo ilustra cómo el patrón Adapter permite que el cliente trabaje con una interfaz específica del dominio (JSONFormatter), 
+mientras adapta la interfaz incompatible del Adaptee (CSVFormatter).

@@ -1,0 +1,13 @@
+Imaginemos que se está desarrollando un sistema de reproducción de medios que debe ser compatible con diferentes tipos de dispositivos de salida, 
+como altavoces y auriculares. Se utilizará el patrón Bridge para separar la abstracción del reproductor de medios de su implementación 
+específica para dispositivos de salida.
+
+Implementor (IAudioDevice): Define la interfaz para las implementaciones concretas de dispositivos de salida de audio.
+ConcreteImplementorA y ConcreteImplementorB (Speakers y Headphones): Implementan la interfaz IAudioDevice con lógica específica para altavoces y auriculares.
+Abstraction (MediaPlayer): Define la interfaz abstracta para el reproductor de medios y mantiene una referencia a un objeto de tipo AudioDevice.
+RefinedAbstractionA y RefinedAbstractionB (MP3Player y StreamingPlayer): Extienden la interfaz definida por MediaPlayer y proporcionan implementaciones específicas.
+Cliente (MediaApp): Utiliza los reproductores de medios y sus respectivas implementaciones para reproducir audio.
+
+Este patrón Bridge permite cambiar fácilmente las implementaciones de dispositivos de salida de audio (AudioDevice) 
+sin afectar las clases de reproductores de medios (MP3Player y StreamingPlayer). 
+Además, se puede agregar nuevos reproductores de medios o nuevos tipos de dispositivos de salida de audio sin modificar el código existente. 

@@ -1,0 +1,14 @@
+Supongamos que se está trabajando en un sistema de gestión de empleados y se desea proporcionar una forma de iterar sobre una colección de empleados. 
+Se utilizará el patrón Iterator para lograr esto.
+
+Iterator (EmployeeIterator): Define la interfaz para recorrer elementos de la colección.
+ConcreteIterator (EmployeeListIterator): Implementa la interfaz Iterator y realiza el seguimiento de la posición actual en la colección de empleados.
+Aggregate (EmployeeCollection): Define la interfaz para crear un iterador.
+ConcreteAggregate (EmployeeList): Implementa la interfaz Aggregate y devuelve una instancia de un iterador concreto (EmployeeListIterator).
+Employee (Employee): Representa un elemento en la colección.
+Client (EmployeeManagementClient): Utiliza la colección de empleados y su iterador para recorrer la lista de empleados.
+
+El patrón Iterator permite recorrer una colección de manera uniforme sin exponer los detalles internos de la implementación de la colección. 
+Esto facilita la adición de nuevos tipos de iteradores y la variabilidad en la forma en que se recorre la colección. 
+En un entorno profesional, este patrón se usa comúnmente en la implementación de estructuras de datos, bibliotecas de colecciones y otros casos 
+donde se necesita acceder a elementos de una colección de manera secuencial.

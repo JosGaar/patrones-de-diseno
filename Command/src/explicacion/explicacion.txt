@@ -1,0 +1,10 @@
+Supongamos que se está trabajando en una aplicación de procesamiento de documentos y se desea implementar un sistema de comandos para 
+realizar operaciones como cortar, copiar y pegar texto en un editor de texto. Se utilizará el patrón Command para lograr esto.
+
+En este ejemplo:
+
+Command (Command): Define una interfaz común para los comandos.
+ConcreteCommand (CutCommand, CopyCommand, PasteCommand): Implementan la interfaz Command y están asociados con un objeto receptor (TextEditor). Cada comando realiza una operación específica (cortar, copiar, pegar).
+Receiver (TextEditor): Sabe cómo realizar las operaciones asociadas con los comandos. En este caso, el receptor es un editor de texto.
+Invoker (Menu): Configura y ejecuta los comandos. El cliente puede cambiar dinámicamente el comando asociado con el invocador.
+Cliente (TextEditorClient): Configura el invocador con diferentes comandos y ejecuta operaciones en el editor de texto sin conocer los detalles de implementación.

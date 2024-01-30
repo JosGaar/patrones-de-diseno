@@ -1,0 +1,16 @@
+Supongamos que se está trabajando en un editor de texto y se desea implementar la funcionalidad de deshacer y rehacer utilizando el patrón Memento.
+
+En este ejemplo:
+
+TextEditorMemento (Memento): Representa un punto en el tiempo del estado del editor de texto.
+TextEditor (Originator): Es el objeto cuyo estado interno queremos capturar. Implementa métodos para modificar su contenido y para guardar y restaurar estados.
+History (Caretaker): Mantiene una pila de objetos Memento y gestiona la funcionalidad de deshacer.
+TextEditorClient (Client): Utiliza el editor de texto, guarda instantáneas en el historial y realiza acciones de deshacer.
+
+En este caso, el patrón Memento permite al TextEditor guardar instantáneas de su estado en momentos específicos.
+El History (Caretaker) mantiene un historial de estas instantáneas y proporciona la funcionalidad de deshacer. 
+Este patrón es útil en situaciones donde se necesita restaurar un objeto a un estado anterior, como en aplicaciones que 
+implementan la funcionalidad de deshacer/rehacer.
+
+
+

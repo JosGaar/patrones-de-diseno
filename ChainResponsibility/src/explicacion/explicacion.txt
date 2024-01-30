@@ -1,0 +1,10 @@
+Supongamos que se está trabajando en un sistema de aprobación de gastos y se desea implementar un flujo de aprobación con diferentes niveles de 
+autorización (por ejemplo, supervisor, gerente, director). Se puede utilizar el patrón Chain of Responsibility para construir una cadena de aprobadores.
+
+En este ejemplo:
+
+Handler (Approver): Define una interfaz común para manejar solicitudes y contiene un enlace al próximo manejador en la cadena.
+ConcreteHandler (Supervisor, Manager, Director): Implementan la interfaz del manejador y deciden si pueden manejar la solicitud o si deben pasarla al siguiente manejador en la cadena.
+Client (ExpenseApprovalClient): Inicia una solicitud de aprobación y la envía a través de la cadena de aprobadores.
+
+

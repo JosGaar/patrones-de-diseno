@@ -1,0 +1,16 @@
+Imaginemos un sistema de control de tráfico aéreo, donde se necesita coordinar la comunicación entre diferentes elementos, como aviones, 
+torres de control y sistemas de alerta. Aquí, el patrón Mediator puede ser útil para gestionar 
+las interacciones entre estos elementos sin que tengan que comunicarse directamente entre sí.
+
+En este ejemplo:
+
+AirTrafficControlMediator (Mediator): Define la interfaz para comunicarse con los objetos colegas (aeronaves).
+AirTrafficControlTower (ConcreteMediator): Implementa la interfaz del mediador y coordina las interacciones entre las aeronaves registradas, notificando a las aeronaves en peligro.
+Aircraft (Colleague): Define la interfaz para la comunicación con otros colegas (otras aeronaves).
+Airplane y Drone (ConcreteColleague): Implementan la interfaz del colega y se comunican con otros colegas a través del mediador (AirTrafficControlMediator).
+AirTrafficControlClient (Client): Utiliza el mediador y las aeronaves para simular el cambio de altitud y verificar el espacio aéreo.
+
+En este caso, el mediador (AirTrafficControlTower) coordina las comunicaciones entre las aeronaves (Airplane y Drone). 
+Las aeronaves notifican al mediador cuando desean cambiar de altitud, y el mediador verifica el espacio aéreo y notifica 
+a las aeronaves en peligro si es necesario. Este patrón Mediator ayuda a gestionar de manera centralizada la comunicación 
+entre diferentes elementos del sistema de control de tráfico aéreo.

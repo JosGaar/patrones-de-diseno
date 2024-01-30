@@ -1,0 +1,4 @@
+En este ejemplo, la clase Logger es un Singleton que registra mensajes. La instancia única de Logger se obtiene mediante 
+el método estático getInstance(). El constructor de la clase es privado para evitar la creación de instancias directas, 
+y la instanciación se realiza solo si instance es nula. Además, se utiliza doble verificación (double-checked locking) 
+para asegurarse de que la creación de la instancia sea segura en entornos multi-hilo.

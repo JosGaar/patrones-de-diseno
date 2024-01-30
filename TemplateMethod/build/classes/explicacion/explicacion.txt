@@ -1,0 +1,9 @@
+Supongamos que se está trabajando en un sistema de procesamiento de documentos y se desea proporcionar una estructura común para procesar 
+diferentes tipos de documentos, como documentos de texto y documentos HTML. Se puede utilizar el patrón Template Method para 
+definir un algoritmo común de procesamiento con pasos específicos que las subclases pueden personalizar.
+
+En este ejemplo:
+
+AbstractClass (DocumentProcessor): Define el esqueleto del algoritmo en el método processDocument(), que utiliza pasos concretos (readDocument, extractText, analyzeText, saveResults). Los pasos específicos son implementados por las subclases.
+ConcreteClass (TextDocumentProcessor, HtmlDocumentProcessor): Implementan los métodos abstractos de la clase abstracta y proporcionan la implementación específica para procesar documentos de texto y documentos HTML.
+Cliente (DocumentProcessingClient): Utiliza las subclases concretas para procesar diferentes tipos de documentos, aplicando el Template Method para estructurar el algoritmo de procesamiento.

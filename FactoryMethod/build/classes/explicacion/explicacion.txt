@@ -1,0 +1,9 @@
+Supongamos que se esta trabajando en un sistema de manejo de documentos y se necesita un mecanismo para crear diferentes tipos de documentos, 
+como PDF y Word. Aquí se tiene un ejemplo simple utilizando el patrón Factory Method.
+
+Para aclarar, en el ejemplo proporcionado:
+
+IDocument es la interfaz del producto.
+PDFDocument y WordDocument son implementaciones concretas del producto.
+IDocumentCreator es la interfaz del Factory Method.
+PDFDocumentCreator y WordDocumentCreator son las implementaciones concretas del Factory Method.
